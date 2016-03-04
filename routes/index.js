@@ -4,11 +4,9 @@ var passport = require('passport');
 
 
 router.get('/', function(req, res, next) {
-  //This will probably be the home page for your application
-  //Let's redirect to the signup page.
+  //Use the home page for your application:
+  // shows a choice of local login or Twitter login
   res.render('index');
-
-  //res.redirect('/login');
 });
 
 

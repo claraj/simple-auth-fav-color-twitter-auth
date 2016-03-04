@@ -40,12 +40,13 @@ module.exports = function(passport) {
           return done(err);
         }
 
-        //this user already has an account on our site
+        //this user already has an account on our site. Return this user.
         if (user) {
           return done(null, user);
         }
 
-        //The user does not have an account with our site yet. Make them one.
+        //The user does not have an account with our site yet.
+        //Make a new user and return it.
         else {
           var newUser = new User();
           newUser.twitter.id = profile.id;
